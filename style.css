@@ -1,0 +1,193 @@
+/* ================= GLOBAL ================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fdf7fb;
+}
+
+/* ================= LAYOUT ================= */
+
+.container {
+    display: flex;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(to bottom, #8e2de2, #ff69b4);
+    color: white;
+    padding: 30px 20px;
+    position: fixed;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 12px 0;
+    padding: 10px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* ================= CONTENT ================= */
+
+.content {
+    margin-left: 260px;
+    width: 100%;
+}
+
+/* ================= SECTION (FULL SCREEN) ================= */
+
+section {
+    min-height: 100vh;        /* 1 layar penuh */
+    padding: 100px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* tengah secara vertikal */
+}
+
+/* Card style */
+.card {
+    background: white;
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* ================= PORTFOLIO ================= */
+
+#portfolio h2 {
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.box {
+    background: #ffe6f2;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-6px);
+    background: #f8d7ff;
+}
+
+.project-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 12px;
+}
+
+/* ================= ARTIKEL ================= */
+
+.artikel-box {
+    background: #ffe6f2;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+.artikel-box h3 {
+    color: #6a0dad;
+    margin-bottom: 10px;
+}
+
+.artikel-info {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #6a0dad;
+    font-weight: 500;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    section {
+        padding: 60px 20px;
+        min-height: auto;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 15px;
+    border: 4px solid white;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
